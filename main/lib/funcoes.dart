@@ -17,3 +17,10 @@ double calcVolume(double r) {
   return (4 * pi * (r * r * r)) / 3;
 }
 //---------------------------------
+
+void calculo() {
+  double volume = calcVolume(
+      double.parse(inputoutput(mensagem: "digite o raio da esfera")));
+
+  print(volume.toStringAsFixed(2));
+}

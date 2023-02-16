@@ -1,8 +1,18 @@
 import 'package:main/funcoes.dart';
 
 void main() {
-  double raio = double.parse(inputoutput(mensagem: "digite o raio da esfera"));
-  double volume = calcVolume(raio);
-
-  print(volume.toStringAsFixed(2));
+  String sair = inputoutput(mensagem: "deseja finalizar o calculo?");
+  if (sair == "sim") {
+    print("saiu");
+    return;
+  }
+  if (sair == "nao") {
+    calculo();
+    main();
+    return;
+  }
+  print("não entendi digite novamente");
+  main();
 }
+
+
